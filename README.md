@@ -1,0 +1,1 @@
+A hangman game where users have to guess the correct in six tries.
