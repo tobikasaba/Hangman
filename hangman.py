@@ -15,15 +15,12 @@ def hangman():
 
     # puts the characters into singular quotes in the set
     word_letters = set(word)
-
     alphabet = set(string.ascii_uppercase)
 
     # what the user has guessed
     used_letters = set()
 
-    print(f"The word is: {word}")
-
-    lives = 6
+    lives = 7
 
     while len(word_letters) > 0 and lives > 0:
 
@@ -47,16 +44,13 @@ def hangman():
             else:
                 lives -= 1
                 print("Letter is not in the word")
-
         elif user_letter in used_letters:
             print("You've already used that character, please try again")
-
         else:
             print("Invalid Character")
 
     if lives == 0:
         print(f"Sorry you died, the correct word is {word}")
-
     else:
         print(f"Game completed you guessed the word {word} correctly")
 
